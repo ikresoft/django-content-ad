@@ -1,0 +1,5 @@
+include README.md
+include MANIFEST.in
+recursive-include content_ad/templates *
+recursive-include content_ad/static *
+recursive-include content_ad/locale *
