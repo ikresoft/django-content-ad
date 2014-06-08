@@ -8,7 +8,7 @@ except ImportError:
     from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
-    #page detail
+    #ad detail
     url(
         r'^(?P<slug>[-\w]+)/$',
         'content_ad.views.ad_detail',
