@@ -14,9 +14,10 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.conf import settings as site_settings
+from django.utils.text import slugify
 
 from content import settings
-from content.models import Content
+from category_content.models import CategoryContent
 
 from managers import AdManager
 
@@ -51,7 +52,7 @@ class Advertiser(models.Model):
     def get_website_url(self):
         return self.website
 
-class Ad(Content):
+class Ad(CategoryContent):
     url = models.URLField(verbose_name=_(u'Advertised URL'), null=True, blank=True)
     start_showing = models.DateTimeField(verbose_name=_(u'Start showing'),
                                          default=now)
@@ -60,6 +61,9 @@ class Ad(Content):
 
     # Relations
     advertiser = models.ForeignKey(Advertiser, verbose_name=_("Ad Provider"), null=True, blank=True)
+
+    def get_slug(self):
+        return slugify(self.title)
 
     def get_absolute_url(self):
         if self.url:

@@ -32,8 +32,7 @@ class AdAdmin(ChildAdmin):
     )
 
     fieldsets = fieldsets + ((_('Advanced Options'), {
-            'fields': ('slug', ('publish_date', 'publish_time'),
-                       'update_date', 'site', ),
+            'fields': ('slug', 'date_modified', 'site', ),
             'classes': ('collapse',),
         }),)
     form = AdForm

@@ -7,10 +7,10 @@ from django import forms
 from django.utils.translation import ugettext as _
 
 from models import Ad
-from content.forms import ContentForm
+from category_content.forms import CategoryContentForm
 
-class AdForm(ContentForm):
+class AdForm(CategoryContentForm):
     class Meta:
     	model = Ad
-    	exclude = ('comment_status', )
+    	exclude = ('allow_comments', )
 
