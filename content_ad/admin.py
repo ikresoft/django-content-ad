@@ -10,10 +10,9 @@ from content import settings
 from models import Ad
 from forms import AdForm
 
-from content.admin import ChildAdmin
+from content.admin import ContentAdmin
 
-class AdAdmin(ChildAdmin):
-    base_model = Ad
+class AdAdmin(ContentAdmin):
     fieldsets = (
         (None, {
             'fields': ('title', 'body')
