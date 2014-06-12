@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from django.contrib import admin
 from django import forms
 from django.conf import settings as site_settings
 from django.contrib import admin
@@ -36,3 +37,4 @@ class AdAdmin(ContentAdmin):
         }),)
     form = AdForm
 
+admin.site.register(Ad, AdAdmin)
