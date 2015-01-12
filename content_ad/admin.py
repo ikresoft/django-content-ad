@@ -2,15 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from django import forms
-from django.conf import settings as site_settings
-from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from content import settings
 from models import Ad
 from forms import AdForm
-
+import translation
 from content.admin import ContentAdmin
 
 class AdAdmin(ContentAdmin):
