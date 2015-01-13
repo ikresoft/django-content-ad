@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from django.contrib.admin.views.decorators import staff_member_required
-from django.http import HttpResponseRedirect, Http404
+from django.http import Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from content import settings
 from models import Ad
+
 
 def ad_detail(request, slug, extra_context={}):
     try:

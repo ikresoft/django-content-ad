@@ -9,6 +9,7 @@ from forms import AdForm
 import translation
 from content.admin import ContentAdmin
 
+
 class AdAdmin(ContentAdmin):
     fieldsets = (
         (None, {
