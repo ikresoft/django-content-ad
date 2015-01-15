@@ -6,7 +6,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from models import Ad
 from forms import AdForm
-import translation
 from content.admin import ContentAdmin
 
 
