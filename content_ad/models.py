@@ -10,8 +10,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.conf import settings as site_settings
-from django.utils.text import slugify
-
+from slugify import slugify
 from content import settings
 from content.models import CategoryContent
 
