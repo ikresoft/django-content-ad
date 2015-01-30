@@ -57,7 +57,7 @@ class Ad(CategoryContent):
     advertiser = models.ForeignKey(Advertiser, verbose_name=_("Ad Provider"), null=True, blank=True)
 
     def get_slug(self):
-        return slugify(self.title)
+        return slugify(self.title, ok='', only_ascii=True)
 
     def get_absolute_url(self):
         if self.url:
